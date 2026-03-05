@@ -5,7 +5,6 @@ import moment from "moment";
 import Clock from "./clock";
 import SearchForm from "./searchForm";
 import WeatherInfo from "./weatherInfo";
-import Loader from "./loader";
 import { weatherTheme } from "./weatherTheme";
 import WeatherIcon from "./weatherIcon";
 
@@ -46,8 +45,7 @@ export default function Weather() {
   }, [theme.background]);
 
   if (!weatherData.loading) {
-    searchCity();
-    return <Loader />;
+    return searchCity();
   }
 
   return (
