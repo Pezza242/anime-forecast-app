@@ -17,7 +17,7 @@ body {
   border-radius: 3px;
   color: white;
   width: 600px;
-  height: 500px;
+  max-height: fit-content;
   margin: 0px auto;
   margin-top: 25px;
 }
