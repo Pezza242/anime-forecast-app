@@ -7,17 +7,17 @@ export default function WeatherForecast(props) {
   let [loading, setLoading] = useState(false);
   let [forecast, setForcast] = useState(null);
 
-  //let longitude = props.coords.lat;
-  //let latitude = props.coords.lon;
-  //let apiKey = "aa9f555583ebe9bb2cc64bd6b978ad42";
+  let longitude = props.coords.lon;
+  let latitude = props.coords.lat;
+  let apiKey = "aa9f555583ebe9bb2cc64bd6b978ad42";
 
   function handleResponse(response) {
     setLoading(true);
     setForcast(response.data.list);
-    console.log(response.data.list);
+    //console.log(response.data.list);
   }
 
-  let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=51.5072&lon=-0.1276&appid=aa9f555583ebe9bb2cc64bd6b978ad42&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(handleResponse);
 
   if (loading) {
