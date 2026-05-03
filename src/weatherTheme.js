@@ -1,110 +1,128 @@
 export const weatherTheme = {
-  "01d": {
+  "clear-sky-day": {
     icon: "https://i.ibb.co/fVSRWTLm/sun-icon.png",
     description: "Sun weather icon",
     background: "https://i.ibb.co/7xz1YsLd/clear-sky.gif",
+    box: "rgba(111, 186, 239, 0.3)",
     colour: "#3d89c0ff",
   },
-  "01n": {
+  "clear-sky-night": {
     icon: "https://i.ibb.co/S8Z8yRm/moon-icon.png",
     description: "Full moon weather icon",
     background: "https://i.ibb.co/0pYHbyLQ/starry-clear-night.gif",
+    box: "rgba(66, 121, 177, 0.3)",
     colour: "#2C3E50",
   },
-  "02d": {
+  "few-clouds-day": {
     icon: "https://i.ibb.co/nNkpY6b8/sunny-cloud-icon.png",
     description: "Sunny cloud weather icon",
     background: "https://i.ibb.co/0y4pNxp3/sunny-clouds.gif",
+    box: "rgba(153, 199, 247, 0.3)",
     colour: "#738eaa",
   },
-  "02n": {
+  "few-clouds-night": {
     icon: "https://i.ibb.co/8gZMKK6v/night-cloud-icon.png",
     description: "Cloudy night weather icon",
     background: "https://i.ibb.co/qYfxf4nW/chill-night.gif",
+    box: "rgba(174, 172, 172, 0.3)",
     colour: "#343434",
   },
-  "03d": {
+  "scattered-clouds-day": {
     icon: "https://i.ibb.co/v4LCrbk4/cloud-icon.png",
     description: "A cloud weather icon",
     background: "https://i.ibb.co/gMCSVRGk/broken-cloud.gif",
+    box: "rgba(113, 164, 222, 0.3)",
     colour: "#143153",
   },
-  "03n": {
+  "scattered-clouds-night": {
     icon: "https://i.ibb.co/v4LCrbk4/cloud-icon.png",
     description: "A cloud weather icon",
     background: "https://i.ibb.co/Nq7JZtq/cloudy-night.gif",
+    box: "rgba(149, 170, 177, 0.3)",
     colour: "#424D50",
   },
-  "04d": {
+  "broken-clouds-day": {
     icon: "https://i.ibb.co/dwk2sj9m/very-cloudy-icon.png",
     description: "Two clouds weather icon",
     background: "https://i.ibb.co/MDpmtvNS/overcast-clouds.gif",
+    box: "rgba(204, 202, 202, 0.3)",
     colour: "#7A7A7A",
   },
-  "04n": {
+  "broken-clouds-night": {
     icon: "https://i.ibb.co/dwk2sj9m/very-cloudy-icon.png",
     description: "Two clouds weather icon",
     background: "https://i.ibb.co/Xfp3gm6H/very-cloudy-night.gif",
+    box: "rgba(156, 136, 179, 0.3)",
     colour: "#1F1729",
   },
-  "09d": {
+  "shower-rain-day": {
     icon: "https://i.ibb.co/yF6Dcw5c/rain-icon.png",
     description: "Rain cloud weather icon",
     background: "https://i.ibb.co/j9WZrwQV/rain.gif",
+    box: "rgba(117, 129, 151, 0.3)",
     colour: "#1F232B",
   },
-  "09n": {
+  "shower-rain-night": {
     icon: "https://i.ibb.co/yF6Dcw5c/rain-icon.png",
     description: "Rain cloud weather icon",
     background: "https://i.ibb.co/HRXby4n/rainy-night.gif",
+    box: "rgba(137, 136, 136, 0.3)",
     colour: "#000000",
   },
-  "10d": {
+  "rain-day": {
     icon: "https://i.ibb.co/7xDJJyGK/rainy-day-icon.png",
     description: "Rain cloud with a sun weather icon",
     background: "https://i.ibb.co/NDzkTbp/rainy-day.gif",
+    box: "rgba(110, 120, 138, 0.3)",
     colour: "#1F232B",
   },
-  "10n": {
+  "rain-night": {
     icon: "https://i.ibb.co/pjzdc3CZ/rainy-night-icon.png",
     description: "Rain cloud with a full moon weather icon",
     background: "https://i.ibb.co/PGfgybC6/Rainy-street.gif",
+    box: "rgba(142, 141, 141, 0.3)",
     colour: "#000000",
   },
-  "11d": {
+  "thunderstorm-day": {
     icon: "https://i.ibb.co/spfsXSNV/thunderstorm-icon.png",
     description: "Thunderstorm cloud weather icon",
     background: "https://i.ibb.co/JjPXCxh2/thunderstorm.gif",
+    box: "rgba(81, 133, 161, 0.3)",
     colour: "#0F1E26",
   },
-  "11n": {
+  "thunderstorm-night": {
     icon: "https://i.ibb.co/SXtZ8502/thunderstorm-night-icon.png",
     description: "Thunderstorm cloud with a moon weather icon",
     background: "https://i.ibb.co/1fN1SByQ/thunderstorm-night.gif",
+    box: "rgba(79, 79, 168, 0.3)",
     colour: "#030312",
   },
-  "13d": {
+  "snow-day": {
     icon: "https://i.ibb.co/jZkSjpKt/snow-icon.png",
     description: "A snow cloud icon",
     background: "https://i.ibb.co/5gnXvGdR/snow-day.gif",
+    box: "rgba(164, 164, 164, 0.3)",
     colour: "#383838",
   },
-  "13n": {
+  "snow-night": {
     icon: "https://i.ibb.co/jZkSjpKt/snow-icon.png",
     description: "A snow cloud icon",
     background: "https://i.ibb.co/tMt1h6pb/snowy-night.gif",
+    box: "rgba(120, 135, 148, 0.3)",
     colour: "#1E2327",
   },
-  "50d": {
+  "mist-day": {
     icon: "https://i.ibb.co/zTprT45S/mist-icon.png",
     description: "A mist cloud weather icon",
     background: "https://i.ibb.co/Kj4LXh5g/mist.gif",
+    box: "rgba(141, 135, 138, 0.3)",
     colour: "#2F2D2E",
   },
-  "50n": {
+  "mist-night": {
     icon: "https://i.ibb.co/zTprT45S/mist-icon.png",
     description: "A mist cloud weather icon",
     background: "https://i.ibb.co/Pzm6vVPz/misty-night.gif",
+    box: "rgba(139, 134, 137, 0.3)",
     colour: "#2F2D2E",
   },
 };

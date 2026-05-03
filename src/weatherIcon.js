@@ -2,12 +2,13 @@ import React from "react";
 import { weatherTheme } from "./weatherTheme";
 
 export default function WeatherIcon({ data }) {
-  return (
-    <img
-      className="weather-icon"
-      src={weatherTheme[data].icon}
-      alt={weatherTheme.description}
-      border="0"
-    />
-  );
+  const theme = weatherTheme[data];
+
+  if (!theme) {
+    return null;
+  } else {
+    return (
+      <img className="weather-icon" src={theme.icon} alt={theme.description} />
+    );
+  }
 }

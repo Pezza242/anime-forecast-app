@@ -17,19 +17,21 @@ export default function Weather() {
 
   function handleResponse(response) {
     let d = response.data;
+
     setWeatherData({
       loading: true,
-      city: d.name,
-      coords: d.coord,
-      temperature: d.main.temp,
-      humidity: d.main.humidity,
+      city: d.city,
+      coords: d.coordinates,
+      temperature: d.temperature.current,
+      humidity: d.temperature.humidity,
       wind: d.wind.speed,
-      icon: d.weather[0].icon,
-      description: d.weather[0].description,
+      icon: d.condition.icon,
+      description: d.condition.description,
     });
   }
   function searchCity() {
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=50fa4024e3b1d5eac2f51ab18a47e997&units=metric`;
+    let apiKey = "eb79bof31898546ffea432d4bb90t390";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
   function updateCity(event) {
@@ -51,7 +53,7 @@ export default function Weather() {
   }
 
   return (
-    <div className="weather">
+    <div className="weather" style={{ backgroundColor: theme.box }}>
       <header
         className="weather-header"
         style={{ backgroundColor: theme.colour }}
@@ -64,7 +66,7 @@ export default function Weather() {
       <WeatherIcon data={weatherData.icon} />
       <WeatherInfo data={weatherData} theme={theme} />
       <hr id="line-2" />
-      <WeatherForecast coords={weatherData.coords} />
+      <WeatherForecast coords={weatherData.coords} theme={theme} />
     </div>
   );
 }
