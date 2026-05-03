@@ -5,6 +5,9 @@
   flex-direction: column;
   align-items: center;
 }
+.forecast-day {
+  margin-bottom: 2px;
+}
 .temperature-forecast {
   list-style: none;
   display: flex;
