@@ -7,6 +7,7 @@ import SearchForm from "./searchForm";
 import WeatherInfo from "./weatherInfo";
 import { weatherTheme } from "./weatherTheme";
 import WeatherIcon from "./weatherIcon";
+import WeatherForecast from "./weatherForecast";
 
 export default function Weather() {
   const [weatherData, setWeatherData] = useState({ loading: false });
@@ -19,6 +20,7 @@ export default function Weather() {
     setWeatherData({
       loading: true,
       city: d.name,
+      coords: d.coord,
       temperature: d.main.temp,
       humidity: d.main.humidity,
       wind: d.wind.speed,
@@ -61,6 +63,8 @@ export default function Weather() {
       <Clock theme={theme} />
       <WeatherIcon data={weatherData.icon} />
       <WeatherInfo data={weatherData} theme={theme} />
+      <hr id="line-2" />
+      <WeatherForecast coords={weatherData.coords} />
     </div>
   );
 }
