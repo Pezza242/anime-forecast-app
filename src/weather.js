@@ -33,14 +33,21 @@ export default function Weather() {
     let apiKey = "eb79bof31898546ffea432d4bb90t390";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
+
+    if (!city.trim()) return;
   }
   function updateCity(event) {
     setCity(event.target.value);
   }
   function handleSubmit(event) {
     event.preventDefault();
+    if (!city || city.trim() === "") {
+      console.log("No city entered");
+      return;
+    }
     searchCity();
   }
+
   useEffect(() => {
     if (theme.background) {
       document.body.style.backgroundImage = `url(${theme.background})`;
@@ -64,7 +71,11 @@ export default function Weather() {
       <hr id="line-1" />
       <Clock theme={theme} />
       <WeatherIcon data={weatherData.icon} />
-      <WeatherInfo data={weatherData} theme={theme} />
+      {weatherData ? (
+        <WeatherInfo data={weatherData} theme={theme} />
+      ) : (
+        "Loading..."
+      )}
       <hr id="line-2" />
       <WeatherForecast coords={weatherData.coords} theme={theme} />
     </div>

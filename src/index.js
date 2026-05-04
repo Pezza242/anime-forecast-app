@@ -8,6 +8,21 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Weather />
+    <footer>
+      This project was coded by{" "}
+      <a href="https://github.com/Pezza242" target="_blank" rel="noreferrer">
+        Peri Williams-Yearwood
+      </a>
+      , is open-sourced{" "}
+      <a
+        href="https://github.com/Pezza242/anime-forecast-app"
+        target="_blank"
+        rel="noreferrer"
+      >
+        on GitHub
+      </a>{" "}
+      , and hosted on Netlify
+    </footer>
   </React.StrictMode>,
 );
 
