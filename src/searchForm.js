@@ -1,13 +1,14 @@
 import React from "react";
 
-export default function SearchForm({ onSubmit, onChange, theme }) {
+export default function SearchForm({ onSubmit, onChange, query, theme }) {
   return (
     <form id="search-form" onSubmit={onSubmit}>
       <input
         className="search-bar"
         type="search"
-        placeholder="Enter a city..."
+        placeholder="Enter a city, or city, country..."
         onChange={onChange}
+        value={query}
         required
       />
       <input

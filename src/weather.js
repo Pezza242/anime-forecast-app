@@ -11,7 +11,7 @@ import WeatherForecast from "./weatherForecast";
 
 export default function Weather() {
   const [weatherData, setWeatherData] = useState({ loading: false });
-  const [city, setCity] = useState("London");
+  const [query, setQuery] = useState("London");
   let date = moment().format("dddd Do MMMM YYYY");
   const theme = weatherTheme[weatherData.icon] || {};
 
@@ -31,17 +31,18 @@ export default function Weather() {
   }
   function searchCity() {
     let apiKey = "eb79bof31898546ffea432d4bb90t390";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${query}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
-    if (!city.trim()) return;
+    if (!query.trim()) return;
   }
-  function updateCity(event) {
-    setCity(event.target.value);
+  function updateQuery(event) {
+    setQuery(event.target.value);
   }
+
   function handleSubmit(event) {
     event.preventDefault();
-    if (!city || city.trim() === "") {
+    if (!query || query.trim() === "") {
       console.log("No city entered");
       return;
     }
@@ -67,7 +68,12 @@ export default function Weather() {
       >
         <p className="date">{date}</p>
       </header>
-      <SearchForm onSubmit={handleSubmit} onChange={updateCity} theme={theme} />
+      <SearchForm
+        onSubmit={handleSubmit}
+        onChange={updateQuery}
+        query={query}
+        theme={theme}
+      />
       <hr id="line-1" />
       <Clock theme={theme} />
       <WeatherIcon data={weatherData.icon} />
