@@ -21,7 +21,14 @@ root.render(
       >
         on GitHub
       </a>{" "}
-      , and hosted on Netlify
+      , and hosted{" "}
+      <a
+        href="https://react-anime-forecast-app.netlify.app/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        on Netlify
+      </a>
     </footer>
   </React.StrictMode>,
 );
