@@ -61,7 +61,11 @@ export default function Weather() {
   }
 
   return (
-    <div className="weather" style={{ backgroundColor: theme.box }}>
+    <div
+      id="weather"
+      className="container-fluid"
+      style={{ backgroundColor: theme.box }}
+    >
       <header
         className="weather-header"
         style={{ backgroundColor: theme.colour }}

@@ -1,4 +1,29 @@
-.WeatherForecast {
+@media (max-width: 650px) {
+  #WeatherForecast {
+    padding-right: 10px;
+  }
+  .DailyForecast {
+    max-width: 60px;
+    margin: 0px 6px;
+    justify-content: center;
+  }
+  .forecast-icon {
+    max-width: 30px;
+  }
+  ul.temperature-forecast {
+    font-size: 10px;
+    padding: 0px;
+  }
+  .max-temp {
+    font-size: 12px;
+    padding-right: 2px;
+  }
+  .min-temp {
+    font-size: 12px;
+    padding-left: 0px;
+  }
+}
+#WeatherForecast {
   padding-bottom: 10px;
   margin: 10px;
   display: inline-flex;

@@ -5,6 +5,14 @@ body {
   text-align: center;
   max-height: fit-content;
 }
+@media (max-width: 650px) {
+  #weather {
+    max-width: 400px;
+  }
+  #footer {
+    font-size: 8px;
+  }
+}
 .weather-header {
   background-color: #738eaa;
   height: 45px;
@@ -13,7 +21,7 @@ body {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
-.weather {
+#weather {
   border-radius: 3px;
   color: white;
   width: 600px;
